@@ -14,7 +14,7 @@ coco-split \
     --annotations_file ./annotations/instances_default.json
 ```
 
-# coco-split help
+## coco-split help
 ```shell
 usage: coco-split [-h] --annotations_file ANNOTATIONS_FILE --valid_ratio VALID_RATIO --test_ratio
                   TEST_RATIO [--train_name TRAIN_NAME] [--valid_name VALID_NAME] [--test_name TEST_NAME]
