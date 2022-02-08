@@ -1,0 +1,39 @@
+[tool.poetry]
+name = "echo1-coco-split"
+version = "0.1.0"
+description = ""
+authors = ["Michael Mohamed <michael.mohamed@echo1.io>"]
+readme = "README.md"
+license = "MIT"
+homepage = "https://github.com/e1-io/echo1-coco-builder"
+repository = "https://github.com/e1-io/echo1-coco-builder"
+
+include = [
+    "LICENSE",
+]
+
+[tool.poetry.scripts]
+coco-split = 'echo1_coco_split.echo1_coco_split:main'
+
+[tool.poetry.dependencies]
+python = ">=3.7.1,<4.0"
+funcy = "^1.17"
+scikit-learn = "^1.0.2"
+
+[tool.poetry.dev-dependencies]
+black = "^21.12b0"
+pytest = ">=5.2"
+
+[build-system]
+requires = ["poetry-core>=1.0.0"]
+build-backend = "poetry.core.masonry.api"
+
+[tool.black]
+line-length = 88
+target-version = ['py37']
+include = '\.pyi?$'
+extend-exclude = '''
+# A regex preceded with ^/ will apply only to files and directories
+# in the root of the project.
+^/foo.py  # exclude a file named foo.py in the root of the project (in addition to the defaults)
+'''
