@@ -111,55 +111,56 @@ def main(args):
                 pass
 
 
-parser = argparse.ArgumentParser(
-    description="Splits a coco annotations file into a training, validation, and test set."
-)
-parser.add_argument(
-    "--annotations_file",
-    type=str,
-    dest="annotations_file",
-    help="Path to COCO annotations file.",
-    required=True,
-)
-parser.add_argument(
-    "--valid_ratio",
-    type=float,
-    dest="valid_ratio",
-    help="set valid dataset ratio",
-    required=True,
-)
-parser.add_argument(
-    "--test_ratio",
-    type=float,
-    dest="test_ratio",
-    help="set test dataset ratio",
-    required=True,
-)
-parser.add_argument(
-    "--train_name",
-    type=str,
-    default="train.json",
-    help="Where to store COCO training annotations",
-)
-parser.add_argument(
-    "--valid_name",
-    type=str,
-    default="valid.json",
-    help="Where to store COCO valid annotations",
-)
-parser.add_argument(
-    "--test_name",
-    type=str,
-    default="test.json",
-    help="Where to store COCO test annotations",
-)
-parser.add_argument(
-    "--has_annotations",
-    dest="has_annotations",
-    action="store_true",
-    help="Ignore all images without annotations. Keep only these with at least one annotation",
-)
+def app():
+    parser = argparse.ArgumentParser(
+        description="Splits a coco annotations file into a training, validation, and test set."
+    )
+    parser.add_argument(
+        "--annotations_file",
+        type=str,
+        dest="annotations_file",
+        help="Path to COCO annotations file.",
+        required=True,
+    )
+    parser.add_argument(
+        "--valid_ratio",
+        type=float,
+        dest="valid_ratio",
+        help="set valid dataset ratio",
+        required=True,
+    )
+    parser.add_argument(
+        "--test_ratio",
+        type=float,
+        dest="test_ratio",
+        help="set test dataset ratio",
+        required=True,
+    )
+    parser.add_argument(
+        "--train_name",
+        type=str,
+        default="train.json",
+        help="Where to store COCO training annotations",
+    )
+    parser.add_argument(
+        "--valid_name",
+        type=str,
+        default="valid.json",
+        help="Where to store COCO valid annotations",
+    )
+    parser.add_argument(
+        "--test_name",
+        type=str,
+        default="test.json",
+        help="Where to store COCO test annotations",
+    )
+    parser.add_argument(
+        "--has_annotations",
+        dest="has_annotations",
+        action="store_true",
+        help="Ignore all images without annotations. Keep only these with at least one annotation",
+    )
 
-args = parser.parse_args()
+    args = parser.parse_args()
 
-main(args)
+    main(args)

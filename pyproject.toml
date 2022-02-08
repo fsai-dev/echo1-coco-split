@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "echo1-coco-split"
-version = "0.1.0"
+version = "0.1.2"
 description = ""
 authors = ["Michael Mohamed <michael.mohamed@echo1.io>"]
 readme = "README.md"
@@ -13,7 +13,7 @@ include = [
 ]
 
 [tool.poetry.scripts]
-coco-split = 'echo1_coco_split.echo1_coco_split:main'
+coco-split = 'echo1_coco_split.echo1_coco_split:app'
 
 [tool.poetry.dependencies]
 python = ">=3.7.1,<4.0"
