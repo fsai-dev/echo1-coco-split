@@ -98,15 +98,20 @@ def main(args):
                     raise Exception(
                         "There are no annotations to save. Skipping {}...".format(m[0])
                     )
+                _annotations = filter_annotations(annotations, m[1])
                 save_coco(
                     m[0],
                     info,
                     licenses,
                     m[1],
-                    filter_annotations(annotations, m[1]),
+                    _annotations,
                     categories,
                 )
-                print("Saved {} annotations in {}".format(len(m[1]), m[0]))
+                print(
+                    "Saved {} annotations from {} images to {}".format(
+                        len(_annotations), len(m[1]), m[0]
+                    )
+                )
             except:
                 pass
 
