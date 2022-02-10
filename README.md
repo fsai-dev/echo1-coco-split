@@ -44,3 +44,7 @@ options:
   --seed SEED           Set the seed generator
 ```
 
+## Thanks
+Previous work done by:
+* https://github.com/akarazniewicz/cocosplit
+* https://github.com/dnfwlxo11/cocosplit_train_test_valid
