@@ -133,14 +133,14 @@ def app():
         "--valid_ratio",
         type=float,
         dest="valid_ratio",
-        help="set valid dataset ratio",
+        help="Set valid dataset ratio",
         required=True,
     )
     parser.add_argument(
         "--test_ratio",
         type=float,
         dest="test_ratio",
-        help="set test dataset ratio",
+        help="Set test dataset ratio",
         required=True,
     )
     parser.add_argument(
@@ -165,14 +165,14 @@ def app():
         "--has_annotations",
         dest="has_annotations",
         action="store_true",
-        help="Ignore all images without annotations. Keep only these with at least one annotation",
+        help="Ignore all images without annotations. Keep only those with at least one annotation",
     )
     parser.add_argument(
         "--seed",
         type=float,
         default=11,
         dest="seed",
-        help="set the seed generator",
+        help="Set the seed generator",
         required=False,
     )
 
