@@ -67,7 +67,9 @@ def main(args):
 
         # Try to split based on the test ratio and if this fails, we assume that there is not a test set
         try:
-            train_before, test = train_test_split(images, test_size=args.test_ratio)
+            train_before, test = train_test_split(
+                images, test_size=args.test_ratio, random_state=args.seed
+            )
         except:
             train_before = images
             test = []
@@ -79,7 +81,7 @@ def main(args):
         # Try to get the train and validation set
         try:
             train, valid = train_test_split(
-                train_before, test_size=valid_ratio_adjusted
+                train_before, test_size=valid_ratio_adjusted, random_state=args.seed
             )
         except:
             train = train_before
@@ -164,6 +166,14 @@ def app():
         dest="has_annotations",
         action="store_true",
         help="Ignore all images without annotations. Keep only these with at least one annotation",
+    )
+    parser.add_argument(
+        "--seed",
+        type=float,
+        default=11,
+        dest="seed",
+        help="set the seed generator",
+        required=False,
     )
 
     args = parser.parse_args()

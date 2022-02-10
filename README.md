@@ -17,7 +17,26 @@ coco-split \
 ## coco-split help
 ```shell
 usage: coco-split [-h] --annotations_file ANNOTATIONS_FILE --valid_ratio VALID_RATIO --test_ratio
-                  TEST_RATIO [--train_name TRAIN_NAME] [--valid_name VALID_NAME] [--test_name TEST_NAME]
-                  [--has_annotations]
-coco-split: error: the following arguments are required: --annotations_file, --valid_ratio, --test_ratio
+                  TEST_RATIO [--train_name TRAIN_NAME] [--valid_name VALID_NAME]
+                  [--test_name TEST_NAME] [--has_annotations] [--seed SEED]
+
+Splits a coco annotations file into a training, validation, and test set.
+
+options:
+  -h, --help            show this help message and exit
+  --annotations_file ANNOTATIONS_FILE
+                        Path to COCO annotations file.
+  --valid_ratio VALID_RATIO
+                        set valid dataset ratio
+  --test_ratio TEST_RATIO
+                        set test dataset ratio
+  --train_name TRAIN_NAME
+                        Where to store COCO training annotations
+  --valid_name VALID_NAME
+                        Where to store COCO valid annotations
+  --test_name TEST_NAME
+                        Where to store COCO test annotations
+  --has_annotations     Ignore all images without annotations. Keep only these with at least one
+                        annotation
+  --seed SEED           set the seed generator
 ```
