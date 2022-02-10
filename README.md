@@ -9,9 +9,12 @@ pip install echo1-coco-split
 # Run the coco-split
 coco-split \
     --has_annotations \
-    --valid_ratio .2 \
-    --test_ratio .1 \
-    --annotations_file ./annotations/instances_default.json
+    --valid_ratio .15 \
+    --test_ratio .05 \
+    --annotations_file ./instances_default.json
+Saved 490 annotations from 53 images to train.json
+Saved 136 annotations from 11 images to valid.json
+Saved 34 annotations from 4 images to test.json
 ```
 
 ## coco-split help
@@ -40,3 +43,4 @@ options:
                         annotation
   --seed SEED           Set the seed generator
 ```
+
