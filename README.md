@@ -27,16 +27,16 @@ options:
   --annotations_file ANNOTATIONS_FILE
                         Path to COCO annotations file.
   --valid_ratio VALID_RATIO
-                        set valid dataset ratio
+                        Set valid dataset ratio
   --test_ratio TEST_RATIO
-                        set test dataset ratio
+                        Set test dataset ratio
   --train_name TRAIN_NAME
                         Where to store COCO training annotations
   --valid_name VALID_NAME
                         Where to store COCO valid annotations
   --test_name TEST_NAME
                         Where to store COCO test annotations
-  --has_annotations     Ignore all images without annotations. Keep only these with at least one
+  --has_annotations     Ignore all images without annotations. Keep only those with at least one
                         annotation
-  --seed SEED           set the seed generator
+  --seed SEED           Set the seed generator
 ```
