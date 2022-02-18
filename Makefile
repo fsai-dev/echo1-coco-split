@@ -3,7 +3,7 @@ install:
 	 poetry run pip install scikit-learn==1.0.2
 
 test:
-	poetry run pytest -s  --disable-warnings
+	poetry run pytest -s --disable-warnings
 
 build:
 	rm -rf ./dist
